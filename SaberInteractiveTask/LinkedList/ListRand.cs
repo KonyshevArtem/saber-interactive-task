@@ -10,6 +10,7 @@ namespace LinkedList
 
         public void Serialize(FileStream s)
         {
+            ListSerializer.Serialize(s, this);
         }
 
         public void Deserialize(FileStream s)
