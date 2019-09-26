@@ -1,4 +1,4 @@
-# Тестовое задание Saber Interactive на должность Gameplay Programmer
+# Тестовое задание Saber Interactive на должность Gameplay Programmer [![Build Status](https://travis-ci.com/KonyshevArtem/saber-interactive-task.svg?token=z3sjoAcC4HGWpiWtgTxy&branch=master)](https://travis-ci.com/KonyshevArtem/saber-interactive-task)
 
 ## Задание 1
 
