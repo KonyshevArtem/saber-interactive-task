@@ -7,7 +7,7 @@ namespace LinkedList
     /// <summary>
     /// This class handles linked list serialization.
     /// </summary>
-    public class ListSerializer
+    public static class ListSerializer
     {
         /// <summary>
         /// Serialize linked list and write to file stream.

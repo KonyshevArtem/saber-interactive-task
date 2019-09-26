@@ -1,0 +1,10 @@
+language: csharp
+mono:
+  - latest
+solution: SaberInteractiveTask/SaberInteractiveTask.sln
+install:
+  - nuget restore SaberInteractiveTask/SaberInteractiveTask.sln
+  - nuget install NUnit.Console -Version 3.9.0 -OutputDirectory testrunner
+script:
+  - msbuild /p:Configure=Release SaberInteractiveTask/SaberInteractiveTask.sln
+  - mono ./testrunner/NUnit.ConsoleRunner.3.9.0/tools/nunit3-console.exe ./SaberInteractiveTask/LinkedListTests/bin/Release/LinkedListTests.dll
