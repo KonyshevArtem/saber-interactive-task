@@ -20,9 +20,9 @@ namespace LinkedListTests
         }
 
         [OneTimeSetUp]
-        public void SetUp()
+        public void OneTimeSetUp()
         {
-            fileStream = new FakeFileStream("test.json", FileMode.OpenOrCreate);
+            fileStream = new FakeFileStream("serialize_test.json", FileMode.OpenOrCreate);
         }
 
         [Test]
