@@ -38,6 +38,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Exceptions\EmptyStreamException.cs" />
+    <Compile Include="Exceptions\UnconnectedNodeException.cs" />
+    <Compile Include="Exceptions\UnexpectedCharException.cs" />
+    <Compile Include="Exceptions\UnexpectedEndException.cs" />
+    <Compile Include="ListDeserializer.cs" />
     <Compile Include="ListNode.cs" />
     <Compile Include="ListRand.cs" />
     <Compile Include="ListSerializer.cs" />

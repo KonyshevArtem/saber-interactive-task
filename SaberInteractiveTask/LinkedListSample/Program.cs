@@ -1,4 +1,5 @@
-﻿using System.IO;
+﻿using System;
+using System.IO;
 using LinkedList;
 
 namespace LinkedListSample
@@ -7,14 +8,32 @@ namespace LinkedListSample
     {
         public static void Main(string[] args)
         {
+            SerializeSample();
+            DeserializeSample();
+        }
+
+        private static void DeserializeSample()
+        {
             ListRand list = new ListRand();
-            ListNode node1 = new ListNode {Data = "test1"};
-            ListNode node2 = new ListNode {Data = "test2", Prev = node1};
-            list.Head = node1;
-            list.Tail = node2;
-            node1.Next = node2;
-            node1.Rand = node2;
-            node2.Rand = node2;
+            using (FileStream fs = new FileStream("test.json", FileMode.Open))
+            {
+                list.Deserialize(fs);
+            }
+
+            Console.WriteLine(list.Head.Data);
+            Console.WriteLine(list.Head.Next.Data);
+        }
+
+        private static void SerializeSample()
+        {
+            ListRand list = new ListRand();
+            ListNode head = new ListNode {Data = "test1"};
+            ListNode tail = new ListNode {Data = "test2", Prev = head};
+            list.Head = head;
+            list.Tail = tail;
+            head.Next = tail;
+            head.Rand = tail;
+            tail.Rand = tail;
             using (FileStream fs = new FileStream("test.json", FileMode.OpenOrCreate))
             {
                 list.Serialize(fs);

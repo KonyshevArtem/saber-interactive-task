@@ -15,6 +15,7 @@ namespace LinkedList
 
         public void Deserialize(FileStream s)
         {
+            ListDeserializer.Deserialize(s, this);
         }
     }
 }

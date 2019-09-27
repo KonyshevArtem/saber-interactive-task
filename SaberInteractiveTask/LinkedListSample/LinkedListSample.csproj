@@ -7,7 +7,7 @@
     <ProjectGuid>{615F1735-215B-4C66-A941-F2E427539EF3}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>ConsoleApplication1</RootNamespace>
+    <RootNamespace>LinkedListSample</RootNamespace>
     <AssemblyName>LinkedListSample</AssemblyName>
     <TargetFrameworkVersion>v4.7.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>

@@ -82,17 +82,29 @@ namespace LinkedListTests
         }
 
         private byte[] bytes;
+        private long currentByte = 0;
 
         public override void Write(byte[] array, int offset, int count)
         {
             bytes = new byte[array.Length];
             Array.Copy(array, bytes, array.Length);
+            currentByte = 0;
         }
 
         public override int Read(byte[] array, int offset, int count)
         {
             Array.Copy(bytes, array, bytes.Length);
             return 0;
+        }
+
+        public override int ReadByte()
+        {
+            if (currentByte >= bytes.Length)
+            {
+                return -1;
+            }
+
+            return bytes[currentByte++];
         }
     }
 }
